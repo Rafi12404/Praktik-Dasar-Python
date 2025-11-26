@@ -1,0 +1,463 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "1b0b1811-c490-4f83-b5e4-a38b1aceb272",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Hallo Takumi\n",
+      "Hallo Takuimi\n"
+     ]
+    }
+   ],
+   "source": [
+    "#type string\n",
+    "print('Hallo Takumi' )\n",
+    "print(\"Hallo Takuimi\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "f9f1bcb1-7024-498f-a5b4-1c535e224c12",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Maling\n",
+      "ketangkep\n",
+      "Maling ketangkep\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Variabel Type String\n",
+    "s1 = 'Maling'\n",
+    "s2 = 'ketangkep'\n",
+    "# menampilkan type string\n",
+    "print (s1)\n",
+    "print (s2)\n",
+    "print (s1 +' '+ s2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "725c76a7-aa55-4340-8558-2d8af276f331",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "False\n",
+      "False\n",
+      "True\n",
+      "True\n",
+      "True\n"
+     ]
+    }
+   ],
+   "source": [
+    "# membandingkan string\n",
+    "s1= '120 pisang'\n",
+    "s2 = '50 magga'\n",
+    "print(s1>s2)\n",
+    "print(s1>=s2)\n",
+    "print(s1<s2)\n",
+    "print(s1<=s2)\n",
+    "print(s1!=s2)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "5a81ed7a-f6b7-48d9-b46b-02a12d61b8db",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "JOKOWEI\n",
+      "J\n",
+      "K\n",
+      "JO\n",
+      "JOKOW\n",
+      "OWEI\n",
+      "EI\n",
+      "JOK\n",
+      "hiroshimanagasaki\n",
+      "jumlah kata=\n",
+      "hidup JOKOWEI\n",
+      "JOKOWEIJOKOWEIJOKOWEIJOKOWEI\n"
+     ]
+    }
+   ],
+   "source": [
+    "print('JOKOWEI')\n",
+    "# mengambil substring\n",
+    "# step 1) membuat variabel\n",
+    "s = 'JOKOWEI'\n",
+    "# MENAMPILKAN KARAKTER\n",
+    "print( s[0])\n",
+    "print( s[-5])\n",
+    "print( s[:2])\n",
+    "print( s[:-2])\n",
+    "print( s[3:])\n",
+    "print( s[-2:])\n",
+    "print( s[0:3])\n",
+    "print('hiroshimanagasaki')\n",
+    "j= 'hiroshimanagasaki'\n",
+    "print ('jumlah kata=');len(j)\n",
+    "print('hidup' +' '+ s)\n",
+    "print(s*4)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "549043c3-b40a-465b-a120-635d4dea2c8f",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "1"
+      ]
+     },
+     "execution_count": 31,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Menemukan offset substring\n",
+    "s = 'takumi'\n",
+    "s.find('aku')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "ff04ab2b-e072-4ac8-b5b0-961b29113aac",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'TAKUmi'"
+      ]
+     },
+     "execution_count": 32,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# mengganti kemunculan suatu substring dengan subtring lainnya\n",
+    "s = 'Takumi'\n",
+    "s.replace('aku', 'AKU')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "3d24555b-d758-4c79-b6d2-565297474f49",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'TAKUMI'"
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#MENGKONVERSI HURUF BESAR DAN KECIL KE HURUF BESAR SEMUA\n",
+    "s = 'TaKumi'\n",
+    "s.upper()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "cbadb77f-6759-4147-8489-f85117a97386",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#type Numerik dibagi menjadi :\n",
+    "# 1) int / bil. contoh = 1; 23; 165\n",
+    "# 2) float (desimal). cth = 3.14; 0,75\n",
+    "# 3) Complex Number.cth = 3 + 4j"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "55252c77-1c8c-4ffa-835f-f95588ed842d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'int'>\n",
+      "<class 'int'>\n",
+      "<class 'int'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# type integer\n",
+    "a = 1\n",
+    "b = -17\n",
+    "c = 100\n",
+    "\n",
+    "print(type(a))\n",
+    "print(type(b))\n",
+    "print(type(c))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "7de7c979-4a2f-4872-b5c6-e8e605645bcd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'float'>\n",
+      "<class 'float'>\n",
+      "<class 'float'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "#type FLOAT \n",
+    "x = 3.14\n",
+    "y = -0.175\n",
+    "z = 2.05\n",
+    "\n",
+    "print(type(x))\n",
+    "print(type(y))\n",
+    "print(type(z))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "89b9f4c5-2560-440a-8548-1146b4aff287",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'complex'>\n",
+      "<class 'complex'>\n",
+      "3.0\n",
+      "2.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#type complex\n",
+    "s1 = 3 + 2j\n",
+    "s2 = -2.5j\n",
+    "\n",
+    "print(type(s1))\n",
+    "print(type(s2))\n",
+    "print(s1.real)\n",
+    "print(s1.imag)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "7feb48a5-86e4-4e47-9f55-e60b5dfcbfcd",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "3\n",
+      "-17.0\n",
+      "(-0.175+0j)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Konver Tipe Data Numerik\n",
+    "\n",
+    "#Konversi ke integer\n",
+    "x = int(3.14)\n",
+    "print(x)\n",
+    "\n",
+    "#Konversi ke float\n",
+    "b = float (-17)\n",
+    "print (b)\n",
+    "\n",
+    "#Konversi ke Complex\n",
+    "y = complex(-0.175)\n",
+    "print(y)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "8d956fa5-770f-4005-b0d5-e2e450496ddf",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "21\n",
+      "9\n",
+      "90\n",
+      "2.5\n",
+      "2\n",
+      "3\n",
+      "11390625\n"
+     ]
+    }
+   ],
+   "source": [
+    "#operasi Aritmatika\n",
+    "a = 15\n",
+    "b = 6\n",
+    "print(a+b)#penjumlahan\n",
+    "print(a-b)#pengurangan\n",
+    "print(a*b)#perkalian\n",
+    "print(a/b)#pembagian\n",
+    "print(a//b)#untuk pembagian bilangan bulat\n",
+    "print(a%b)#modulus\n",
+    "print(a**b)#eksponen\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "f25670d0-14a7-4e24-98d7-21e5ef639153",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "2.0\n",
+      "6.283185307179586\n",
+      "1.0\n"
+     ]
+    }
+   ],
+   "source": [
+    "#modul math\n",
+    "import math\n",
+    "a = 4\n",
+    "b = 2\n",
+    "c = 0\n",
+    "print(math.sqrt(a)) # akar variabel a = 4\n",
+    "print(math.pi*(b)) # perkalian b = 2 dengan pi = 3,14\n",
+    "print(math.cos(c)) #cosinus variabel c = 0"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 42,
+   "id": "01457ea9-f01b-41e5-913d-3c8c631543ff",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "(1.600485180440241+1.2496210676876531j)\n",
+      "(22.979085577886128+14.744805188558727j)\n"
+     ]
+    }
+   ],
+   "source": [
+    "#modul cmath\n",
+    "import cmath\n",
+    "z = 1+4j\n",
+    "print(cmath.sqrt(z))# akar variabel z\n",
+    "print(cmath.sin(z))#sinus variabel z\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 44,
+   "id": "91bfa0ff-da46-466f-9ef5-0afdce82b034",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "<class 'bool'>\n",
+      "<class 'bool'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "# type BOOLEAN\n",
+    "# CONTOH PROGRAM TYPE BOOLEAN\n",
+    "t = True\n",
+    "f = False\n",
+    "\n",
+    "print (type(t))\n",
+    "print (type(f))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "91264c54-8d05-4e87-b4dd-3bbd884a6585",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#Operasi type Boolean\n",
+    "t = True\n",
+    "f = False\n",
+    "print(t an"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.13.5"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
