@@ -1,0 +1,60 @@
+#variabel dictionary
+dic={'satu':10,'dua':15}
+#menampilkan dictinory:
+print('satu:',dic['satu'])
+print('dua:',dic['dua'])
+print(dic['satu']*dic['dua'])
+print(dic['satu'] - dic['dua'])
+
+
+#menambah elemen kedalam dictianary
+dic={'satu':10,'dua':15}
+dic['tiga']=20
+print(dic)
+
+#menghapus elemen dictionary
+dic={'satu':10,'dua':15, 'tiga':120}
+del dic['satu']
+print(dic)
+
+D = {'a':12, 'b':13, 'c':14 }
+print(D)
+Ks=list(D.keys())
+print(Ks)
+Ks.sort()
+print(Ks)
+
+for key in Ks:
+    print (key,'=',D[key])
+
+
+p={'raffi':1,'ijal':2,'topik':3}
+Ks=list(p.keys())
+Ks.sort()
+
+for key in Ks:
+    print (key,'=',p[key])
+
+
+
+    dic={'dosen':'irsan さん', 'prodi':'jepang', 'matakuliyah':'python'}
+print('[dosen]:',dic['dosen'])
+print('[prodi]:',dic['prodi'])
+print('[matakuliyah]:',dic['matakuliyah'])
+
+
+#dalam pyton mirip dengan array normal
+#dalam list,elemen tidak diindexkan dengan kunci(key) tertentu
+#index bilangan selalu dimulai dari nol
+#index negatif dimulai dari kanan dan dimulai dari -1
+#bentuk umum nama_list[nilai1,nilai2,nilai3]
+list = [10,20,30,40,50 ]
+print('index list')
+print(list[0])
+print(list[2])
+print(list[4])
+print(list[-1])
+print(list[-2])
+print(list[-3])
+print('banayak nya elemen')
+print(len(list))
