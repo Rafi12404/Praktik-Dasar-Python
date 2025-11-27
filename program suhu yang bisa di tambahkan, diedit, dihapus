@@ -1,0 +1,47 @@
+print('SELAMAT DATANG DI INFO SUHU TERKINI')
+suhu = [23, 24, 25]
+
+while True:
+    print("\nMenu:")
+    print("1. Menambah suhu")
+    print("2. Mengedit nilai suhu")
+    print("3. Menghapus nilai suhu")
+    print("4. Melihat semua nilai suhu")
+    print("5. Keluar")
+
+    pilih = input("Pilih menu: ")
+
+    if pilih == "1":
+        nilai_baru = float(input("Masukkan suhu baru boss: "))
+        suhu.append(nilai_baru)
+        print(f"Suhu {nilai_baru} berhasil ditambahkan.")
+
+    elif pilih == "2":
+        print("Data suhu saat ini:", suhu)
+        nomor_ubah = int(input("Pilih nomor index suhu yang mau diedit (mulai dari 1): "))
+        if 1 <= nomor_ubah <= len(suhu):
+            value_ubah = float(input("Diubah jadi berapa: "))
+            lama = suhu[nomor_ubah - 1]
+            suhu[nomor_ubah - 1] = value_ubah
+            print(f"Suhu {lama} diubah menjadi {value_ubah}.")
+        else:
+            print("Index tidak valid.")
+
+    elif pilih == "3":
+        print("Data suhu saat ini:", suhu)
+        nomor_hapus = int(input("Masukkan nomor index suhu yang mau dihapus (mulai dari 1): "))
+        if 1 <= nomor_hapus <= len(suhu):
+            terhapus = suhu.pop(nomor_hapus - 1)
+            print(f"Suhu {terhapus} berhasil dihapus.")
+        else:
+            print("Index tidak valid.")
+
+    elif pilih == "4":
+        print("Data suhu terkini:", suhu)
+
+    elif pilih == "5":
+        print("Terima kasih, program selesai.")
+        break
+
+    else:
+        print("Menu tidak dikenal, silakan pilih angka 1-5.")
