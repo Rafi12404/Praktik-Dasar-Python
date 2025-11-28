@@ -1,0 +1,11 @@
+print(' RAFFI\n', 'akbar\n', 'alafin\n','alifa','elpat')
+print('nilai rata rata \n', 'A : 80\n','B : 90\n')
+prakA=80
+prakB=90
+c = (input('NAMA:'))
+a = int(input('masukan nilaiA :'))
+b = int(input('masukan nilaiB :'))
+if a > prakA and b > prakB :
+  print('KAMU LULAS YA')
+else :
+  print('KAMU HARUS BELAJAR LAGI YAH')
