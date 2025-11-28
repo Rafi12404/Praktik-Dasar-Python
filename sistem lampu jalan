@@ -1,0 +1,18 @@
+import random
+
+lux = random.randint(0, 2000)  # Memperbaiki error dengan menyediakan dua argumen
+print('SELAMAT DATANG DI IFO NYALANYA LAMPU RUMAH KU')
+hari = ['senin','selasa','rabu','kamis','jumat','sabtu']
+a= random.choices(hari)
+print(a[0])
+a = 3
+inten = lux / a
+
+print('intensitas cahaya nya =',inten)
+
+if inten > 1000:
+	print('kondisi = lampu menyela')
+elif inten <= 500:
+	print('kondisi = lampu mati')
+else:
+	print('kondisi = lampu redup kerena hujan')
