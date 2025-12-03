@@ -1,0 +1,42 @@
+def smart_parking():
+    parking_set = set()
+
+    while True:
+        print("\n=== SMART PARKING ===")
+        print("1. Masuk Parkir (input nomor plat)")
+        print("2. Keluar Parkir (hapus nomor plat)")
+        print("3. Monitoring (lihat semua plat terdaftar)")
+        print("4. Exit")
+        
+        pilihan = input("Pilih menu (1-4): ")
+
+        if pilihan == "1":
+            plat = input("Masukkan nomor plat: ").upper()
+            parking_set.add(plat)
+            print(f"Nomor plat {plat} berhasil masuk.")
+
+        elif pilihan == "2":
+            plat = input("Masukkan nomor plat yang keluar: ").upper()
+            if plat in parking_set:
+                parking_set.remove(plat)
+                print(f"Nomor plat {plat} berhasil keluar.")
+            else:
+                print(f"Nomor plat {plat} tidak ditemukan.")
+
+        elif pilihan == "3":
+            if len(parking_set) == 0:
+                print("Tidak ada kendaraan terdaftar.")
+            else:
+                print("Daftar nomor plat terdaftar:")
+                for p in parking_set:
+                    print("-", p)
+
+        elif pilihan == "4":
+            print("Program selesai. Terima kasih!")
+            break
+
+        else:
+            print("Pilihan tidak valid, coba lagi.")
+
+# Jalankan program
+smart_parking()
