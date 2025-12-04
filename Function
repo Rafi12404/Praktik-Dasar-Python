@@ -1,0 +1,22 @@
+print("-----------NILAI RAFFI & AKBAR---------")
+
+def peringkat ():
+    print("score raffi ")
+    nilai_raffi = nilai("raffi:",int(input()))
+    print("score Akbar")
+    nilai_akbar = nilai("Akbar",int(input()))
+
+    if nilai_akbar > nilai_raffi:
+        print("Akbar juara 1 😉😉😉😉","sebesar:",nilai_akbar)
+    else :
+        print("Rafi menang😁😁😁😁😁")
+
+
+def nilai(nama,a):
+    rumus=a/5
+    print("tampilkan nilai",nama,':',rumus)
+    return rumus
+
+
+
+peringkat ()
