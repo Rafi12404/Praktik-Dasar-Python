@@ -1,0 +1,86 @@
+# List utama untuk menyimpan informasi sensor
+sensor_list = []
+
+def tambah():
+    kode = input("ID Sensor: ")
+    kategori = input("Jenis Sensor: ")
+    angka = float(input("Nilai Sensor: "))
+    unit = input("Satuan: ")
+    kondisi = input("Status (Normal/Warning): ")
+    sensor_list.append([kode, kategori, angka, unit, kondisi])
+    print("Sensor berhasil ditambahkan!\n")
+
+def tampil():
+    if not sensor_list:
+        print("Tidak ada data.\n")
+        return
+    for item in sensor_list:
+        print(item)
+    print()
+
+def cari():
+    kode = input("Masukkan ID Sensor: ")
+    for item in sensor_list:
+        if item[0] == kode:
+            print("Data ditemukan:", item, "\n")
+            return
+    print("Data tidak ditemukan.\n")
+
+def ubah():
+    kode = input("Masukkan ID Sensor: ")
+    for item in sensor_list:
+        if item[0] == kode:
+            item[2] = float(input("Nilai baru: "))
+            item[4] = input("Status baru: ")
+            print("Data berhasil diperbarui!\n")
+            return
+    print("Data tidak ditemukan.\n")
+
+def hapus():
+    kode = input("Masukkan ID Sensor: ")
+    for item in sensor_list:
+        if item[0] == kode:
+            sensor_list.remove(item)
+            print("Data berhasil dihapus!\n")
+            return
+    print("Data tidak ditemukan.\n")
+
+def analisis():
+    if not sensor_list:
+        print("Tidak ada data untuk dianalisis.\n")
+        return
+    nilai = [item[2] for item in sensor_list]
+    print("Rata-rata nilai:", sum(nilai)/len(nilai))
+    print("Nilai maksimum:", max(nilai))
+    print("Nilai minimum:", min(nilai), "\n")
+
+def simpan():
+    with open("rekap_sensor.txt", "w") as file:
+        for item in sensor_list:
+            file.write(str(item) + "\n")
+    print("Data tersimpan di rekap_sensor.txt\n")
+
+# Menu interaktif
+while True:
+    print("Menu: 1.Tambah 2.Tampil 3.Cari 4.Ubah 5.Hapus 6.Analisis 7.Simpan 8.Keluar")
+    pilihan = input("Pilih menu: ")
+
+    if pilihan == "1":
+        tambah()
+    elif pilihan == "2":
+        tampil()
+    elif pilihan == "3":
+        cari()
+    elif pilihan == "4":
+        ubah()
+    elif pilihan == "5":
+        hapus()
+    elif pilihan == "6":
+        analisis()
+    elif pilihan == "7":
+        simpan()
+    elif pilihan == "8":
+        print("Program selesai.\n")
+        break
+    else:
+        print("Pilihan tidak valid!\n")
